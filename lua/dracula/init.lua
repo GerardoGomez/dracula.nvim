@@ -114,7 +114,7 @@ M.apply = function()
 	else
 		highlight("SignColumn", nil, colors.bg, nil, nil)
 	end
-	
+
 	highlight("Conceal", colors.comment, nil, nil, nil)
 	highlight("CursorColumn", nil, colors.black, nil, nil)
 	highlight("CursorLine", nil, colors.selection, nil, nil)
@@ -162,7 +162,7 @@ M.apply = function()
 	highlight("VisualNOS", colors.visual, nil, nil, nil)
 	highlight("WarningMsg", colors.yellow, nil, nil, nil)
 	highlight("WildMenu", colors.black, colors.white, nil, nil)
-	
+
 	if(vim.g.dracula_show_end_of_buffer == true) then
 		highlight("EndOfBuffer", colors.visual, nil, nil, nil)
 	else
@@ -219,13 +219,13 @@ M.apply = function()
 	highlight("TSVariable", colors.fg, nil, nil, nil)
 	highlight("TSVariableBuiltin", colors.purple, nil, nil, nil)
 
-	highlight("TSText", colors.orange, nil, nil, nil)
-	highlight("TSStrong", colors.orange, nil, nil, nil)
-	highlight("TSEmphasis", colors.orange, nil, nil, nil)
-	highlight("TSUnderline", colors.orange, nil, nil, nil)
-	highlight("TSTitle", colors.orange, nil, nil, nil)
+	highlight("TSText", colors.white, nil, nil, nil)
+	highlight("TSStrong", colors.white, nil, "bold", nil)
+	highlight("TSEmphasis", colors.white, nil, "italic", nil)
+	highlight("TSUnderline", colors.white, nil, "underline", nil)
+	highlight("TSTitle", colors.red, nil, "bold", nil)
 	highlight("TSLiteral", colors.orange, nil, nil, nil)
-	highlight("TSURI", colors.orange, nil, nil, nil)
+	highlight("TSURI", colors.pink, nil, "italic", nil)
 
 	highlight("TSTag", colors.cyan, nil, nil, nil)
 	highlight("TSTagDelimiter", colors.white, nil, nil, nil)
@@ -370,11 +370,11 @@ M.apply = function()
 
 	-- IndentBlankLine
 	highlight("IndentBlanklineContextChar", colors.bright_red, nil, "nocombine", nil)
-	
+
 	-- Nvim compe
 	highlight("CmpItemAbbrDeprecated", colors.white, colors.menu, 'none', nil)
 	highlight("CmpItemAbbrMatch", colors.cyan, colors.menu, 'none', nil)
-	
+
 	-- Link highlights
 	vim.api.nvim_command('highlight link CompeDocumentation Pmenu')
 	vim.api.nvim_command('highlight link CompeDocumentationBorder Pmenu')
